@@ -1,4 +1,8 @@
-/* Algemene opmaak van de website */
+```css
+/* =========================
+   ALGEMENE OPMAAK
+   ========================= */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -6,16 +10,19 @@ body {
     color: #19324a;
 }
 
-/* Bovenste menu */
+
+/* =========================
+   MENU BOVENAAN
+   ========================= */
+
 nav {
     background-color: #19b5c9;
-    padding: 18px;
+    padding: 18px 25px;
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 10px;
 }
 
-/* Naam van de website */
 .logo {
     color: white;
     font-size: 22px;
@@ -23,7 +30,9 @@ nav {
     margin-right: auto;
 }
 
-/* Knoppen in het menu */
+
+/* Gewone knoppen */
+
 nav a {
     color: white;
     text-decoration: none;
@@ -31,80 +40,142 @@ nav a {
     border-radius: 8px;
 }
 
-/* Als je met je muis over een knop gaat */
+
+/* Kleur als je met je muis over een knop gaat */
+
 nav a:hover {
     background-color: #128fa1;
 }
 
-/* Dropdownmenu */
+
+/* =========================
+   AI DROPDOWNMENU
+   ========================= */
+
 .dropdown {
     position: relative;
 }
 
-/* Inhoud van het dropdownmenu */
+
+/* AI knop */
+
+.dropbtn {
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: block;
+}
+
+
+/* Dropdownmenu */
+
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: white;
-    min-width: 180px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    min-width: 230px;
+
+    /* Het menu begint direct onder AI */
+    top: 100%;
+    left: 0;
+
     border-radius: 8px;
-    top: 40px;
-    right: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    /* Zorgt ervoor dat het menu boven andere dingen komt */
+    z-index: 10;
+
+    /* Geen ruimte tussen AI en dropdown */
+    padding-top: 5px;
 }
 
-/* Links in het dropdownmenu */
+
+/* Tekst in dropdown */
+
 .dropdown-content a {
     color: #19324a;
     display: block;
+    padding: 12px;
+    text-decoration: none;
 }
 
-/* Dropdown zichtbaar maken */
+
+/* Kleur wanneer je over een optie gaat */
+
+.dropdown-content a:hover {
+    background-color: #e5f9fc;
+}
+
+
+/* Dropdown verschijnt als je over AI gaat */
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Hoofdgedeelte */
+
+/* =========================
+   HOOFDGEDEELTE
+   ========================= */
+
 .container {
     max-width: 1000px;
     margin: 50px auto;
     padding: 20px;
 }
 
+
 /* Grote titel */
+
 h1 {
     color: #0b91a5;
     font-size: 42px;
 }
 
-/* Titels van onderdelen */
+
+/* Kleine titels */
+
 h2 {
     color: #0b91a5;
 }
 
-/* Informatieblokken */
+
+/* =========================
+   INFORMATIEBLOKKEN
+   ========================= */
+
 .card {
     background-color: white;
     padding: 25px;
     margin: 25px 0;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-/* Afbeeldingen */
+
+/* =========================
+   AFBEELDINGEN
+   ========================= */
+
 .card img {
     max-width: 100%;
     border-radius: 12px;
 }
 
-/* Afbeelding naast tekst */
+
+/* Twee blokken naast elkaar */
+
 .two-columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
 }
 
-/* Video */
+
+/* =========================
+   VIDEO
+   ========================= */
+
 .video {
     margin-top: 20px;
 }
@@ -116,7 +187,11 @@ h2 {
     border-radius: 12px;
 }
 
-/* Knop */
+
+/* =========================
+   EXTRA KNOP
+   ========================= */
+
 .button {
     display: inline-block;
     background-color: #19b5c9;
@@ -131,7 +206,11 @@ h2 {
     background-color: #128fa1;
 }
 
-/* Onderkant */
+
+/* =========================
+   FOOTER
+   ========================= */
+
 footer {
     text-align: center;
     padding: 25px;
@@ -139,8 +218,13 @@ footer {
     color: white;
 }
 
-/* Voor kleinere schermen */
+
+/* =========================
+   TELEFOON / KLEIN SCHERM
+   ========================= */
+
 @media (max-width: 700px) {
+
     nav {
         flex-wrap: wrap;
     }
@@ -153,3 +237,4 @@ footer {
         font-size: 32px;
     }
 }
+```
