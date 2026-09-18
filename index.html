@@ -1,171 +1,191 @@
-```html
 <!DOCTYPE html>
 <html lang="nl">
 
 <head>
     <meta charset="UTF-8">
-
     <title>Mijn Informatica</title>
 
+    <!-- Koppeling met de CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
 
+    <!-- =========================
+         MENU BOVENAAN
+         ========================= -->
 
-<!-- =========================
-     MENU
-     ========================= -->
+    <nav>
 
-<nav>
+        <!-- Naam links -->
+        <div class="logo">
+            Mijn Informatica
+        </div>
 
-    <div class="logo">
-        Mijn Informatica
-    </div>
+        <!-- Home in het midden -->
+        <div class="home-button">
+            <a href="index.html">Home</a>
+        </div>
 
+        <!-- Andere pagina's rechts -->
+        <div class="menu-right">
 
-    <div class="home-button">
-        <a href="index.html">Home</a>
-    </div>
+            <a href="binair.html">Binair stelsel</a>
 
+            <a href="kleurmodellen.html">Kleurmodellen</a>
 
-    <div class="menu-right">
+            <a href="compressie.html">Compressie</a>
 
-        <a href="binair.html">Binair stelsel</a>
+            <!-- AI dropdown -->
+            <div class="dropdown">
 
-        <a href="kleurmodellen.html">Kleurmodellen</a>
+                <span class="dropbtn">
+                    AI ▼
+                </span>
 
-        <a href="compressie.html">Compressie</a>
+                <div class="dropdown-content">
 
+                    <a href="ai.html#dagelijks">
+                        AI in mijn dagelijks leven
+                    </a>
 
-        <!-- AI dropdown -->
+                    <a href="ai.html#telefoon">
+                        AI op mijn telefoon
+                    </a>
 
-        <div class="dropdown">
+                    <a href="ai.html#leren">
+                        Wat leer ik van AI?
+                    </a>
 
-            <span class="dropbtn">
-                AI ▼
-            </span>
-
-            <div class="dropdown-content">
-
-                <a href="ai.html#dagelijks">
-                    AI in mijn dagelijks leven
-                </a>
-
-                <a href="ai.html#telefoon">
-                    AI op mijn telefoon
-                </a>
-
-                <a href="ai.html#leren">
-                    Wat leer ik van AI?
-                </a>
+                </div>
 
             </div>
 
         </div>
 
-    </div>
-
-</nav>
+    </nav>
 
 
-<!-- =========================
-     HOMEPAGE
-     ========================= -->
+    <!-- =========================
+         INHOUD VAN DE HOMEPAGE
+         ========================= -->
 
-<div class="container">
+    <div class="container">
 
-    <h1>
-        Hoi, ik ben Cas.
-    </h1>
-
-    <p>
-        Welkom op mijn informaticawebsite.
-        Hier leg ik verschillende onderwerpen uit
-        die met informatica te maken hebben.
-    </p>
-
-
-    <!-- Over mij -->
-
-    <div class="card">
-
-        <h2>Over mij</h2>
+        <h1>Hoi, ik ben Cas.</h1>
 
         <p>
-            Mijn naam is Cas van Emmerik.
-            Ik ben 15 jaar en zit in VWO 5
-            op het Vlietland College.
+            Welkom op mijn informaticawebsite.
+            Hier vertel ik over verschillende onderwerpen
+            binnen informatica.
         </p>
 
-        <p>
-            Ik woon in Voorschoten.
-            In mijn vrije tijd ga ik graag naar de sportschool,
-            voetbal ik en game ik.
-        </p>
 
-    </div>
-
-
-    <!-- Interesses -->
-
-    <div class="two-columns">
-
+        <!-- Over mij -->
 
         <div class="card">
 
-            <h2>Mijn interesses</h2>
+            <h2>Over mij</h2>
 
             <p>
-                Mijn favoriete sport is voetbal.
-                Qua muziek luister ik eigenlijk naar van alles.
+                Mijn naam is Cas van Emmerik.
+                Ik ben 15 jaar en zit in VWO 5
+                op het Vlietland College.
             </p>
 
             <p>
-                Ik vind dystopische films, crime en sommige
-                sportfilms interessant.
+                Ik woon in Voorschoten.
+                In mijn vrije tijd ga ik graag naar de sportschool,
+                voetbal ik en game ik.
             </p>
 
         </div>
 
 
-        <div class="card">
+        <!-- Mijn interesses -->
 
-            <h2>Games</h2>
+        <div class="two-columns">
 
-            <p>
-                Ik speel vooral sportgames en schietgames.
-            </p>
+            <div class="card">
+
+                <h2>Mijn interesses</h2>
+
+                <p>
+                    Mijn favoriete sport is voetbal.
+                    Qua muziek luister ik naar van alles.
+                </p>
+
+                <p>
+                    Ik vind dystopische films, crime en
+                    sommige sportfilms interessant.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>Mijn games</h2>
+
+                <p>
+                    Ik speel vooral sportgames en schietgames.
+                </p>
+
+            </div>
 
         </div>
 
 
+        <!-- Foto -->
+
+        <div class="card">
+
+            <h2>Dit ben ik</h2>
+
+            <!-- Zet jouw foto in dezelfde GitHub-map
+                 en noem hem bijvoorbeeld mijnfoto.jpg -->
+
+            <img src="mijnfoto.jpg" alt="Foto van Cas">
+
+        </div>
+
+
+        <!-- Video -->
+
+        <div class="card">
+
+            <h2>Video over informatica</h2>
+
+            <div class="video">
+
+                <iframe
+                    src="https://www.youtube.com/embed/jPhJbKBuNnA"
+                    title="Video over informatica"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <p>
+                Ik heb deze video toegevoegd omdat hij op een
+                duidelijke manier laat zien wat informatica is.
+            </p>
+
+        </div>
+
     </div>
 
 
-    <!-- Foto -->
+    <!-- =========================
+         ONDERKANT VAN DE PAGINA
+         ========================= -->
 
-    <div class="card">
+    <footer>
 
-        <h2>Dit ben ik</h2>
+        © 2026 Cas van Emmerik
 
-        <img src="mijnfoto.jpg" alt="Foto van Cas">
-
-    </div>
-
-
-</div>
-
-
-<footer>
-
-    © 2026 Cas van Emmerik
-
-</footer>
-
+    </footer>
 
 </body>
 
 </html>
-``
