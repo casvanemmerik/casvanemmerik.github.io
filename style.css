@@ -1,55 +1,79 @@
 ```css
 /* =========================
-   ALGEMENE OPMAAK
+   BASIS VAN DE WEBSITE
    ========================= */
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4fbfd;
-    color: #19324a;
+    background:
+        radial-gradient(circle at top left, #dffaff, transparent 35%),
+        radial-gradient(circle at bottom right, #e8f7ff, transparent 35%),
+        #f8fcfd;
+    color: #17324d;
 }
 
 
 /* =========================
-   MENU BOVENAAN
+   MENU
    ========================= */
 
 nav {
-    background-color: #19b5c9;
-    padding: 18px 25px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+
+    padding: 16px 35px;
+
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #dceff3;
 }
 
+
+/* Naam links in het menu */
+
 .logo {
-    color: white;
+    color: #079bb0;
     font-size: 22px;
     font-weight: bold;
+
     margin-right: auto;
 }
 
 
-/* Gewone knoppen */
+/* Gewone menu-knoppen */
 
-nav a {
-    color: white;
+nav > a {
+    color: #29445c;
     text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 8px;
+
+    padding: 11px 16px;
+    border-radius: 10px;
+
+    transition: 0.2s;
 }
 
 
-/* Kleur als je met je muis over een knop gaat */
+/* Hover op menu-knoppen */
 
-nav a:hover {
-    background-color: #128fa1;
+nav > a:hover {
+    background-color: #e2faff;
+    color: #078da1;
 }
 
 
 /* =========================
-   AI DROPDOWNMENU
+   AI DROPDOWN
    ========================= */
 
 .dropdown {
@@ -60,54 +84,77 @@ nav a:hover {
 /* AI knop */
 
 .dropbtn {
-    color: white;
-    padding: 10px 15px;
+    color: #29445c;
+    padding: 11px 16px;
+
+    border-radius: 10px;
     cursor: pointer;
+
     display: block;
+
+    transition: 0.2s;
 }
 
 
-/* Dropdownmenu */
+.dropbtn:hover {
+    background-color: #e2faff;
+    color: #078da1;
+}
+
+
+/* Dropdown zelf */
 
 .dropdown-content {
     display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 230px;
 
-    /* Het menu begint direct onder AI */
+    position: absolute;
+
     top: 100%;
     left: 0;
 
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    width: 245px;
 
-    /* Zorgt ervoor dat het menu boven andere dingen komt */
-    z-index: 10;
+    background-color: white;
 
-    /* Geen ruimte tussen AI en dropdown */
-    padding-top: 5px;
+    padding: 8px;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 15px 35px rgba(18, 95, 110, 0.15);
+
+    border: 1px solid #e1f1f4;
+
+    z-index: 200;
 }
 
 
-/* Tekst in dropdown */
+/* Opties in dropdown */
 
 .dropdown-content a {
-    color: #19324a;
     display: block;
-    padding: 12px;
+
+    padding: 13px 14px;
+
+    color: #29445c;
+
     text-decoration: none;
+
+    border-radius: 9px;
+
+    transition: 0.2s;
 }
 
 
-/* Kleur wanneer je over een optie gaat */
+/* Hover op dropdown opties */
 
 .dropdown-content a:hover {
-    background-color: #e5f9fc;
+    background-color: #e5faff;
+    color: #078da1;
 }
 
 
-/* Dropdown verschijnt als je over AI gaat */
+/* Dropdown openen met hover */
 
 .dropdown:hover .dropdown-content {
     display: block;
@@ -119,37 +166,84 @@ nav a:hover {
    ========================= */
 
 .container {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 20px;
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 70px 25px;
 }
 
 
 /* Grote titel */
 
 h1 {
-    color: #0b91a5;
-    font-size: 42px;
+    font-size: 52px;
+
+    margin-bottom: 15px;
+
+    color: #087f93;
 }
 
 
 /* Kleine titels */
 
 h2 {
-    color: #0b91a5;
+    color: #078da1;
+
+    margin-top: 0;
+}
+
+
+/* Normale tekst */
+
+p {
+    line-height: 1.7;
+    font-size: 17px;
 }
 
 
 /* =========================
-   INFORMATIEBLOKKEN
+   INFORMATIEKAARTEN
    ========================= */
 
 .card {
-    background-color: white;
-    padding: 25px;
-    margin: 25px 0;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    background-color: rgba(255, 255, 255, 0.9);
+
+    padding: 30px;
+
+    margin: 28px 0;
+
+    border-radius: 20px;
+
+    border: 1px solid #e0f1f4;
+
+    box-shadow:
+        0 10px 30px rgba(20, 100, 120, 0.08);
+
+    transition: 0.25s;
+}
+
+
+/* Kaart beweegt iets omhoog bij hover */
+
+.card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(20, 100, 120, 0.12);
+}
+
+
+/* =========================
+   TWEE BLOKKEN NAAST ELKAAR
+   ========================= */
+
+.two-columns {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 28px;
 }
 
 
@@ -158,17 +252,15 @@ h2 {
    ========================= */
 
 .card img {
-    max-width: 100%;
-    border-radius: 12px;
-}
+    width: 100%;
 
+    max-height: 350px;
 
-/* Twee blokken naast elkaar */
+    object-fit: cover;
 
-.two-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    border-radius: 15px;
+
+    margin-top: 15px;
 }
 
 
@@ -180,30 +272,58 @@ h2 {
     margin-top: 20px;
 }
 
+
 .video iframe {
     width: 100%;
-    height: 400px;
+
+    height: 430px;
+
     border: none;
-    border-radius: 12px;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 25px rgba(20, 100, 120, 0.12);
 }
 
 
 /* =========================
-   EXTRA KNOP
+   KNOPPEN
    ========================= */
 
 .button {
     display: inline-block;
-    background-color: #19b5c9;
+
+    background: linear-gradient(
+        135deg,
+        #19bfd2,
+        #079caf
+    );
+
     color: white;
-    padding: 12px 20px;
+
+    padding: 13px 22px;
+
+    border-radius: 10px;
+
     text-decoration: none;
-    border-radius: 8px;
+
+    font-weight: bold;
+
     margin-top: 10px;
+
+    box-shadow:
+        0 7px 18px rgba(7, 156, 175, 0.25);
+
+    transition: 0.2s;
 }
 
+
 .button:hover {
-    background-color: #128fa1;
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(7, 156, 175, 0.35);
 }
 
 
@@ -212,21 +332,34 @@ h2 {
    ========================= */
 
 footer {
+    margin-top: 50px;
+
+    padding: 30px;
+
     text-align: center;
-    padding: 25px;
-    background-color: #19324a;
+
+    background-color: #17324d;
+
     color: white;
 }
 
 
 /* =========================
-   TELEFOON / KLEIN SCHERM
+   MOBIELE VERSIE
    ========================= */
 
 @media (max-width: 700px) {
 
     nav {
         flex-wrap: wrap;
+
+        padding: 15px;
+    }
+
+    .logo {
+        width: 100%;
+
+        margin-bottom: 8px;
     }
 
     .two-columns {
@@ -234,7 +367,15 @@ footer {
     }
 
     h1 {
-        font-size: 32px;
+        font-size: 38px;
+    }
+
+    .container {
+        padding: 40px 18px;
+    }
+
+    .video iframe {
+        height: 250px;
     }
 }
 ```
