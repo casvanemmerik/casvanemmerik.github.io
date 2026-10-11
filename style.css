@@ -64,7 +64,10 @@ body {
 }
 
 .dropdown-content {
-    display: none;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -78,7 +81,9 @@ body {
 /* Menu blijft open bij hover */
 .dropdown:hover .dropdown-content,
 .dropdown:focus-within .dropdown-content {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .dropdown-content a {
