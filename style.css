@@ -62,20 +62,19 @@ body {
 .dropdown {
     position: relative;
 }
-
 .dropdown-content {
-    display: none;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
     position: absolute;
-    right: 0;
-    left: auto;
     top: 100%;
-    background-color: white;
-    min-width: 160px;
-    max-width: 200px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
-    z-index: 1000;
-    overflow-wrap: break-word;
+    left: 0;
+    min-width: 180px;
+    background-color: #142b4a;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
 }
 
 .dropdown:hover .dropdown-content,
